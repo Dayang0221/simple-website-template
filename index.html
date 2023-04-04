@@ -22,6 +22,16 @@
 
     <!-- Want to add Bootstrap? -->
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+        #mynetwork {
+            width: 600px;
+            height: 400px;
+            border: 1px solid lightgray;
+            margin: 0 auto
+        }
+    </style>
     
   </head>
   
@@ -46,10 +56,64 @@
         <div id="content"> 
           
           <div id="home" class="content-region hide">
-            <h2>Home</h2>
-            <p>
-              This is a simple website template published with Github Pages. <a href="https://github.com/cpl-makerlab/simple-website-template">Fork this repository</a> to create your own site!
-            </p>
+
+            <h2 class="center"            >About This Website</h2>  
+            <strong>Aim:</strong>
+            <br>
+                  The aim of this project was to create a user-centred website that would enable 
+                  researchers to work with other members of the group, ensure that they could contribute 
+                  to their research and keep track of and be alerted to relevant and up-to-date information. 
+                  At the same time, the aim of the project was to ensure the usability of the site, always 
+                  thinking about the needs of future users and ensuring that their needs are met.
+            <br>
+            <br>
+        
+            <strong>Background:</strong>
+            <br>
+            Today we are in an era of information explosion and rapid technological development, 
+            which means that we will have an increasing number of means and resources to search 
+            for. In some difficult design projects, we need to work in groups, as the same research 
+            team can increase the efficiency and quality of the work, and here it is important to ensure 
+            that resources are shared within the group to take advantage of it. Just as we have all 
+            had the experience of working on computer projects, we usually use GitHub to upload 
+            our material, and group members in the same block, with permission, can view the 
+            research results and contribution values of other group members, while code for different 
+            functions can be placed under different branches to facilitate subsequent code merging
+
+            <table>
+              <td class="i">
+                <h3 class="center">
+                  LATEST PUBLICATIONS
+                </h3>
+                <p>Jose Camacho-Collados, Kiamehr Rezaee, Talayeh Riahi, Asahi Ushio, Daniel Loureiro, Dimosthenis Antypas, Joanne Boisson, Luis Espinosa-Anke, Fangyu Liu, Eugenio Martínez-Cámara, Gonzalo Medina, Thomas Buhrmann, Leonardo Neves and Francesco Barbieri.
+                  TweetNLP: Cutting-Edge Natural Language Processing for Social Media. 
+                  <a href="#">[paper] [code] [demo]</a>
+                </p>
+
+                <p>Dimosthenis Antypas*, Asahi Ushio*, Jose Camacho-Collados, Leonardo Neves, Vítor Silva and Francesco Barbieri.
+                    Twitter Topic Classification. 
+                    <a href=""> [paper] [data]</a>
+                </p>
+             </td>
+
+             <td class="i">
+              <h3 class="center">
+                LATEST ACTIVITIES / NEWS
+              </h3>
+              <p> <a href="#"> July 2022. </a>
+                I'm happy to announce the first release of TweetNLP, a platform for cutting-edge NLP specialized on social media!
+              </p>
+
+              <p> <a href="#">March 2022.</a>
+                 We are organising the first EvoNLP EvoNLP workshop (Workshop on Ever Evolving NLP), co-located with EMNLP. EvoNLP also features a meaning shift detection shared task framed as Word-in-Context - trial data available!</p>
+
+              <p> <a href="#">February 2022.</a>
+                 We have launched our TimeLMs, with the commitment to release a new language model every three months!
+              </p>
+
+           </td>
+            </table>
+
           </div>
           
           <div id="about" class="content-region hide">
@@ -57,36 +121,114 @@
             <p>
               Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
             </p>
+            <div id="mynetwork"></div>
+            <script type="text/javascript">
+    // 创建节点数据数组
+    var nodes = new vis.DataSet([
+        { id: 1, label: "Project 1" },
+        { id: 2, label: "Project 2" },
+        { id: 3, label: "Project" },
+        { id: 4, label: "Project 1" },
+        { id: 6, label: "HCI" },
+        { id: 7, label: "FYP" }
+    ]);
+
+    // 创建边数据数组
+    var edges = new vis.DataSet([
+        { from: 3, to: 6 },
+        { from: 3, to: 7 },
+        { from: 6, to: 1 },
+        { from: 6, to: 2 },
+        { from: 7, to: 4 },
+    ]);
+    // 获取容器
+    var container = document.getElementById('mynetwork');
+    // 将数据赋值给vis 数据格式化器
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var options = {};
+    // 初始化关系图
+            var network = new vis.Network(container, data, options);</script>
+
+            <br>
+            <br>
+
+            <table>
+              <h4>HCI Project</h4>
+              <td class="i">
+                <div>
+                    Dimosthenis Antypas, Alun Preece, Jose Camacho-Collados (2023).
+                  </div>
+                 <div><a href="https://adigaskell.org/2021/10/13/negativity-spreads-faster-than-positivity-online/">  Negativity spreads faster: A large-scale multilingual twitter analysis on the role of sentiment in political communication </a></div>
+                </td>
+                 
+            <tr></tr>
+             
+            <td class="i">
+              <div>
+                Kiamehr Rezaee, Jose Camacho-Collados (2022).
+              </div>
+               <div><a href="https://aclanthology.org/2022.findings-emnlp.289/">  
+                Probing Relational Knowledge in Language Models via Word Analogies. 
+               </a>
+              </div>
+              
+              
+            </td>
+            </table>
+
+            <table>
+              <h4>FYP Project</h4>
+              <td class="i">
+                <div>
+                  This project will design and build a web site to allow research groups to work collaboratively together.  A user-centred approach will be adopted to define the requirements and design and evaluate the project.
+                  Beyond Web page design, the site needs to allow researchers to contribute information about their research projects, work together on a shared reference store, keep track and provide alerts to relevant new publicatins/journals/calls.
+                  This is also an exercise in HCI and evaluating the usability and accessability of web sites.
+                  </div>
+                </td>
+            </table>
+
+
+          
           </div>
+
+
+
           
           <div id="contact" class="content-region hide">
             <h2>Publication</h2>
             <table>
-    
             <td class="i">
                 <div>
                     Dimosthenis Antypas, Alun Preece, Jose Camacho-Collados (2023).
-                </div>
-                 <a href="#">  Negativity spreads faster: A large-scale multilingual twitter analysis on the role of sentiment in political communication </a>
-                 
-                 <p>Online Social Networks and Media.</p>
+                  </div>
+                 <div><a href="https://adigaskell.org/2021/10/13/negativity-spreads-faster-than-positivity-online/">  Negativity spreads faster: A large-scale multilingual twitter analysis on the role of sentiment in political communication </a></div>
+                 Online Social Networks and Media.
+                 <a href="https://www.interaction-design.org/literature/topics/human-computer-interaction#:~:text=3%2C203%20shares-,What%20is%20Human%2DComputer%20Interaction%20(HCI)%3F,(the%20users)%20and%20computers.">[HCI]   
+                   <a href="https://orca.cardiff.ac.uk/id/eprint/156958/"> [Research] </a>
+                  </a>
+                
              </td>
+
              <tr></tr>
+
              <td class="i">
               <div>
-                  Dimosthenis Antypas, Alun Preece, Jose Camacho-Collados (2023).
+                Kiamehr Rezaee, Jose Camacho-Collados (2022).
               </div>
-               <a href="#">  Negativity spreads faster: A large-scale multilingual twitter analysis on the role of sentiment in political communication </a>
-               
-               <p>Online Social Networks and Media.</p>
-           </td>
+               <div><a href="https://aclanthology.org/2022.findings-emnlp.289/">  
+                Probing Relational Knowledge in Language Models via Word Analogies. 
+               </a>
+              </div>
+               Findings EMNLP 2022.
+               <a href="https://orca.cardiff.ac.uk/id/eprint/156958/">[Research]   
+                <a href="https://pats.cs.cf.ac.uk/archive"> [FYP] </a>
+               </a>
+            </td>
              
             </table>
-
-          
-             
-             
-          
           </div>
 
           <div id="contact2" class="content-region hide">
@@ -129,10 +271,50 @@
                 </tr> 
                </table>
             </p>
+            <h2 class="center">Group 2</h2>
+            <p>
+              <table>
+              <tr>
+              <td>
+              <img src="People/People01a.jpg"  alt="成员1头像">
+                  <p>Member 1</p>
+                  <p>Phd Student</p >
+                 </td>
+              
+              <td>
+              <img src="People/People02a.jpg" alt="成员2头像">
+                 <p>Member 2</p>
+                  <p>Reseacher</p >
+                 </td>
+              
+              <td>
+              <img src="People/People03a.jpg" alt="成员3头像">
+                  <p>Member 3</p>
+                  <p>Professor</p >
+              </td>
+
+              <td>
+                <img src="People/People04a.jpg" alt="成员3头像">
+                    <p>Member 4</p>
+                    <p>Lecturer</p >
+              </td>
+
+              <td>
+                <img src="People/People05a.jpg" alt="成员3头像">
+                    <p>Member 5</p>
+                    <p>Professor</p >
+                </td>
+              
+          
+                </tr> 
+               </table>
+            </p>
           </div>
           
         </div>
+        
       </div>
+      
     </div>
 
     <footer>  
