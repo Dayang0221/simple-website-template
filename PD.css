@@ -1,0 +1,102 @@
+/**
+ * Typography & Text styles
+ */
+
+/* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5em;
+    /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+/**
+   * Links
+   */
+a {
+    font-weight: normal;
+    text-decoration: none;
+    color: #EF6D3D;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+small {
+    font-size: 75%;
+}
+
+.center {
+    text-align: center;
+    vertical-align: top;
+  }
+
+  ul.box {
+    height: 50px;
+    width: 850px;
+    border-top: 3px solid #ff8500;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    margin: 0 auto
+}
+
+ul.box a {
+    height: 50px;
+    /* width: 80px; */
+    padding: 0 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    color: #FFFF;
+    text-decoration: none;
+}
+
+ul.box a:hover {
+    background-color: #edeeed;
+    color: #ff8500;
+}
+
+.box {
+    height: 500px;
+    width: 900px;
+    border-top: 2px solid #ff8500;
+    border-bottom: 2px solid #ff8500;
+    border-left: 2px solid #ff8500;
+    border-right: 2px solid #ff8500;
+    margin: 0 auto;
+}
+
+html,
+#container,
+.inner {
+    background-color: transparent;
+}
+
+html {
+    background: url(background.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+body {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+header,
+#content,
+footer {
+    background: rgba(0, 0, 0, .8);
+    padding: 25px;
+    color: #FFFFFF;
+
+}
+

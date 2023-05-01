@@ -1,0 +1,106 @@
+/**
+ * Typography & Text styles
+ */
+
+/* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5em;
+    /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+/**
+   * Links
+   */
+a {
+    font-weight: normal;
+    text-decoration: none;
+    color: #EF6D3D;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+small {
+    font-size: 75%;
+}
+
+.center {
+    text-align: center;
+    vertical-align: top;
+}
+
+.box {
+    position: relative;
+    height: 500px;
+    width: 950px;
+    border-top: 2px solid #ff8500;
+    border-bottom: 2px solid #ff8500;
+    border-left: 2px solid #ff8500;
+    border-right: 2px solid #ff8500;
+    margin: 0 auto;
+}
+
+.button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.button1 {
+    background-color: rgb(198, 71, 71);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button2{
+    background-color: rgb(27, 147, 27);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+html,
+#container,
+.inner {
+    background-color: transparent;
+}
+
+html {
+    background: url(background.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+body {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+header,
+#content,
+footer {
+    background: rgba(0, 0, 0, .8);
+    padding: 25px;
+    color: #FFFFFF;
+
+}
